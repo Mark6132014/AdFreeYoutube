@@ -1,0 +1,13 @@
+html, body {
+  font-family: Segoe Light UI, Segoe UI, Arial;
+  background: darkred;
+  color: white;
+}
+body #id {
+  height: 150;
+  width: 400;
+  border: 1px solid grey;
+  border-radius: 5px;
+  color: black;
+  background: white;
+}
