@@ -1,0 +1,25 @@
+html, body {
+  font-family: Segoe Light UI, Segoe UI, Arial;
+  background: darkred;
+  color: white;
+  overflow-x: hidden;
+}
+body #id {
+  height: 150px;
+  width: 400px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  color: black;
+  background: white;
+}
+button {
+  background: white;
+  border-radius: 8px;
+  height: 30px;
+  width: 90px;
+  border: 1px solid black;
+  color: black;
+  font-weight: bold;
+  font-family: 'Google Sans', sans-serif;
+  cursor: pointer;
+}

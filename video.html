@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <title>
+      Ad-Free YouTube
+    </title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <center>
+        <iframe height="350" width="650" src="" style="border-radius: 8px; border: 1px solid white; box-shadow: 0, 0, 5 white;" id="video" allowfullscreen></iframe>
+        <br>
+        <br>
+        <button id="copy" style="height: 50px; width: 110px;">COPY ID</button>
+        <button id="youtube" style="height: 50px;">View on YouTube</button>
+        <button id="home" style="height: 50px;">Go to Homepage</button>
+        <br>
+        <br>
+        <button id="download" style="height: 50px;">Download</button>
+    </center>
+    <!-- JavaScript -->
+    <script>
+        var Hashtag = location.hash
+        var videoID = Hashtag.slice(1);
+        function download() {
+            var htmlContent = [document.querySelector(".documentWords").value];
+            var bl = new Blob(htmlContent, {type: "text/js"});
+            var a = document.createElement("a");
+            a.href = URL.createObjectURL(bl);
+            a.download = `video_${videoID}_config.js`;
+            a.hidden = true;
+            document.body.appendChild(a);
+            a.innerHTML = `<iframe style="height: 100vh; width: 100%; position: fixed; top: 0; left: 0;" src="https://youtube.com/embed/${videoID}" allowfullscreen></iframe>`;
+            a.click();
+        }
+        document.querySelector("#video").src = `https://www.youtube.com/embed/${videoID}`
+        document.querySelector("#copy").innerHTML = `${videoID} Copy ID`;
+        document.querySelector("#copy").addEventListener("click", () => {
+            navigator.clipboard.writeText(videoID);
+        });
+        document.querySelector("#youtube").addEventListener("click", () => {
+            location.assign(`https://youtube.com/watch?v=${videoID}`);
+        });
+        document.querySelector("#download").addEventListener("click", download);
+        document.querySelector("#home").addEventListener("click", () => {
+            location.assign("index.html");
+        });
+    </script>
+</body>
+</html>
