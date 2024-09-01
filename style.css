@@ -5,8 +5,8 @@ html, body {
   overflow-x: hidden;
 }
 body #id {
-  height: 150px;
-  width: 400px;
+  height: 40px;
+  width: 300px;
   border: 1px solid grey;
   border-radius: 5px;
   color: black;
