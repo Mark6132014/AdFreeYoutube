@@ -3,8 +3,8 @@
     "name": "Ad-Free YouTube",
     "icons": [
       {
-        "src": "icon.ico",
-        "type": "image/ico",
+        "src": "png_icon.png",
+        "type": "image/png",
         "sizes": "192x192"
       }
     ],
