@@ -5,6 +5,13 @@
     </title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="icon.ico">
+    <link rel="manifest" href="manifest.json">
+    <script>
+        //if browser support service worker
+        if('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('sw.js');
+        };
+      </script>
   </head>
   <body>
     <center>
@@ -29,6 +36,17 @@
         let input = document.querySelector("#id").value;
         location.assign(`video.html#${input}`);
       });
+      if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js')
+      .then((reg) => {
+        console.log('Service worker registered:', reg);
+      })
+      .catch((error) => {
+        console.error('Service worker registration failed:', error);
+      });
+  });
+}
     </script>
 </body>
 </html>
