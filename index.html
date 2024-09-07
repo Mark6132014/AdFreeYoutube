@@ -6,12 +6,11 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="icon.ico">
     <link rel="manifest" href="manifest.json">
-    <!-- Make sure PWA works! -->
     <script>
         //if browser support service worker
         if('serviceWorker' in navigator) {
           navigator.serviceWorker.register('sw.js');
-        };
+        }
       </script>
   </head>
   <body>
