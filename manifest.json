@@ -1,0 +1,15 @@
+{
+    "short_name": "AdBlock Youtube",
+    "name": "Ad-Free Youtube",
+    "icons": [
+      {
+        "src": "png_icon.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      }
+    ],
+    "start_url": "https://mark6132014.github.io/AdFreeYoutube/",
+    "background_color": "#000000",
+    "display": "standalone",
+    "theme_color": "#ff0000"
+  }
