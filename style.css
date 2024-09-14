@@ -1,12 +1,29 @@
 html, body {
   font-family: Segoe Light UI, Segoe UI, Arial;
-  background: darkred;
+  background: linear-gradient(rgb(212, 102, 102), red, darkred);
   color: white;
   overflow-x: hidden;
 }
-body #id {
-  height: 40px;
-  width: 300px;
+.content {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inline-content {
+  height: 70vh;
+  width: 65%;
+  text-align: center;
+  border-bottom: 2px solid white;
+  border-radius: 8px;
+}
+#id {
+  height: 50px;
+  width: 400px;
   border: 1px solid grey;
   border-radius: 5px;
   color: black;
